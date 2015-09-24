@@ -14,3 +14,6 @@ console.log( "KEY (m/44'/0'/0): " + derivedPrivateKey);
  
 var derivedPublicKey = derivedHdPublicKey.publicKey
 console.log( "PUB (m/44'/0'/0): " + derivedPublicKey);
+ 
+var pubAddress = new bitcore.Address(derivedPublicKey, bitcore.Networks.livenet);
+console.log( "Base58 bitcoin address from derived public key: " + pubAddress);
